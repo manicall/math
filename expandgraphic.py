@@ -13,20 +13,19 @@ class MplCanvas(FigureCanvasQTAgg):
 class MainWindow(QtWidgets.QMainWindow):
     def __init__(self, parent=None):
         QtWidgets.QMainWindow.__init__(self, parent)
-        toolbar = NavigationToolbar(self.sc, self)
         self.sc = MplCanvas()
         # Create toolbar, passing canvas as first parament, parent (self, the MainWindow) as second.
+        toolbar = NavigationToolbar(self.sc, self)
         self.grid = QtWidgets.QGridLayout()
         self.grid.setAlignment(QtCore.Qt.AlignHCenter)
         layout = QtWidgets.QVBoxLayout()
-        #layout.addWidget(toolbar)
+        layout.addWidget(toolbar)
         layout.addWidget(self.sc)
         layout.addLayout(self.grid)
         # Create a placeholder widget to hold our toolbar and canvas.
         widget = QtWidgets.QWidget()
         widget.setLayout(layout)
         self.setCentralWidget(widget)
-        #self.add_grafic(start, end, count, f, lambda x: x * 0)
         self.show()
     def add_grafic(self, start, end, count, *args):
         x = np.linspace(start, end, count)
@@ -34,19 +33,3 @@ class MainWindow(QtWidgets.QMainWindow):
             self.sc.axes.plot(x, i(x))
     def add_grid(self, str, x, y):
         self.grid.addWidget(QtWidgets.QLabel(str), x, y)
-
-
-
-app = QtWidgets.QApplication(sys.argv)
-w = MainWindow()
-x = sp.Symbol('x')
-y = sp.log(x, 10) - 7 / (2 * x + 6)  # функция
-f = sp.lambdify(x, y)
-start = 1
-end = 5
-count = 100
-w.add_grafic(start, end, count, f, lambda x: x * 0)
-w.add_grid('text',0,0)
-
-
-app.exec()

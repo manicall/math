@@ -1,9 +1,10 @@
 '''Метод хорд'''
-
-import graphic as g
+from PyQt5 import QtWidgets
+import sys
+import expandgraphic as eg
 import numpy as np
 import sympy as sp
-
+app = QtWidgets.QApplication(sys.argv)
 x = sp.Symbol('x')
 y = x ** 3 - 3 * x ** 2 + 6 * x - 3
 dy = sp.diff(y)  # первая производная
@@ -28,5 +29,9 @@ while (not (np.abs(f(xn1)) <= E * m and np.abs(xn1 - xn) <= E)):
     xn = xn1
     xn1 = xn - f(xn) * (xn - d) / (f(xn) - f(d))
     n += 1
-g.show_result(round(xn1, 4), round(f(xn1), 4))
-g.create_graphic(f, a, b)
+window = eg.MainWindow()
+window.add_grid("Корень: " + str(xn1), 0, 0)
+window.add_grid("Проверка: " + str(f(xn1)), 0, 1)
+window.add_grafic(a, b, 100, f, lambda x: x * 0)
+window.show()
+app.exec()
