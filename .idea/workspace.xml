@@ -1,7 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="5c3566a2-dd20-4438-af31-48cf54a61b22" name="Default Changelist" comment="" />
+    <list default="true" id="5c3566a2-dd20-4438-af31-48cf54a61b22" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ex.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/graphic.py" beforeDir="false" afterPath="$PROJECT_DIR$/graphic.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/math3.1.py" beforeDir="false" afterPath="$PROJECT_DIR$/math3.1.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/math3.2.py" beforeDir="false" afterPath="$PROJECT_DIR$/math3.2.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -14,7 +39,13 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1id7eRgCVBybejDuBRxsiMiUQgk" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -22,11 +53,12 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
-  <component name="RunManager" selected="Python.math3.1">
+  <component name="RunManager" selected="Python.ex">
     <configuration name="ex" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="math" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -90,10 +122,32 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="math3.2" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="math" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/math3.2.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.math3.1" />
         <item itemvalue="Python.ex" />
+        <item itemvalue="Python.math3.2" />
+        <item itemvalue="Python.math3.1" />
         <item itemvalue="Python.graphic" />
       </list>
     </recent_temporary>
@@ -111,6 +165,17 @@
     </task>
     <servers />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="WindowStateProjectService">
     <state x="561" y="271" key="#Scopes" timestamp="1602225792691">
       <screen x="0" y="0" width="1536" height="824" />
@@ -124,38 +189,38 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="528" y="292" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1536.824@0.0.1536.824" timestamp="1602225766036" />
-    <state width="798" height="184" key="GridCell.Tab.0.bottom" timestamp="1602241956499">
+    <state width="1454" height="180" key="GridCell.Tab.0.bottom" timestamp="1602246555463">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="798" height="184" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1602241956499" />
-    <state width="798" height="184" key="GridCell.Tab.0.center" timestamp="1602241956499">
+    <state width="1454" height="180" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1602246555463" />
+    <state width="1454" height="180" key="GridCell.Tab.0.center" timestamp="1602246555462">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="798" height="184" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1602241956499" />
-    <state width="798" height="184" key="GridCell.Tab.0.left" timestamp="1602241956499">
+    <state width="1454" height="180" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1602246555462" />
+    <state width="1454" height="180" key="GridCell.Tab.0.left" timestamp="1602246555462">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="798" height="184" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1602241956499" />
-    <state width="798" height="184" key="GridCell.Tab.0.right" timestamp="1602241956499">
+    <state width="1454" height="180" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1602246555462" />
+    <state width="1454" height="180" key="GridCell.Tab.0.right" timestamp="1602246555462">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="798" height="184" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1602241956499" />
-    <state width="1069" height="264" key="GridCell.Tab.1.bottom" timestamp="1602241956491">
+    <state width="1454" height="180" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1602246555462" />
+    <state width="1117" height="258" key="GridCell.Tab.1.bottom" timestamp="1602243325532">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1069" height="264" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1602241956491" />
-    <state width="1069" height="264" key="GridCell.Tab.1.center" timestamp="1602241956491">
+    <state width="1117" height="258" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1602243325531" />
+    <state width="1117" height="258" key="GridCell.Tab.1.center" timestamp="1602243325530">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1069" height="264" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1602241956491" />
-    <state width="1069" height="264" key="GridCell.Tab.1.left" timestamp="1602241956491">
+    <state width="1117" height="258" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1602243325530" />
+    <state width="1117" height="258" key="GridCell.Tab.1.left" timestamp="1602243325530">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1069" height="264" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1602241956491" />
-    <state width="1069" height="264" key="GridCell.Tab.1.right" timestamp="1602241956491">
+    <state width="1117" height="258" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1602243325530" />
+    <state width="1117" height="258" key="GridCell.Tab.1.right" timestamp="1602243325531">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1069" height="264" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1602241956491" />
+    <state width="1117" height="258" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1602243325531" />
     <state x="277" y="57" key="SettingsEditor" timestamp="1602226114889">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
