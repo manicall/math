@@ -1,5 +1,3 @@
-import sys
-import sympy as sp
 import numpy as np
 from PyQt5 import QtCore, QtWidgets
 from matplotlib.backends.backend_qt5agg import FigureCanvasQTAgg, NavigationToolbar2QT as NavigationToolbar
