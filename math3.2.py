@@ -1,4 +1,5 @@
 '''Метод хорд'''
+<<<<<<< HEAD
 from PyQt5 import QtWidgets
 import sys
 import expandgraphic as eg
@@ -35,3 +36,6 @@ window.add_grid("Проверка: " + str(f(xn1)), 0, 1)
 window.add_grafic(a, b, 100, f, lambda x: x * 0)
 window.show()
 app.exec()
+=======
+
+>>>>>>> main
