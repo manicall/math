@@ -19,7 +19,7 @@ window.setWindowTitle("Метод хорд")
 window.get_funcs(f, lambda x: x * 0)
 window.show()
 
-def analitic_resolve():
+def chord_analitic_resolve():
     a = float(window.grid2_lineEdit1.text())
     b = float(window.grid2_lineEdit2.text())  # отрезок
     print('f(a)*f(b): ', f(a) * f(b))  # < 0
@@ -39,6 +39,6 @@ def analitic_resolve():
     window.grid1_label1.setText("Корень: " + str(xn1))
     window.grid1_label2.setText("Проверка: " + str(f(xn1)))
 
-window.grid2_button2.clicked.connect(analitic_resolve)
+window.grid2_button2.clicked.connect(chord_analitic_resolve)
 app.exec()
 

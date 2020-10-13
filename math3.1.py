@@ -6,7 +6,7 @@ import numpy as np
 import sympy as sp
 
 x = sp.Symbol('x')
-y = sp.log(x, 10) - 7 / (2 * x + 6)  # функция
+y = 'log(x, 10) - 7 / (2 * x + 6)'  # функция
 dy = sp.diff(y)  # первая производная
 d2y = sp.diff(dy)  # вторая производная
 f = sp.lambdify(x, y)
@@ -18,12 +18,14 @@ window = eg.MainWindow()
 window.setWindowTitle("Метод хорд")
 window.get_funcs(f, lambda x: x * 0)
 
-def analitic_resolve():
-    a = 3; b = 4  # отрезок
-    print('f(a)*f(b): ', np.round(f(a)*f(b),4))  # < 0
-    print('f\'(a): ', np.round(df(a),4))  # <> 0
-    print('f\'\'(a): ', np.round(d2f(a),4))  # <> 0
-    print('f(3)*f\'\'(x): ', np.round(f(a)*d2f(np.linspace(a, b, 10)), 4))  # > 0 => x0 = a
+
+def tangent_analitic_resolve():
+    a = float(window.grid2_lineEdit1.text())
+    b = float(window.grid2_lineEdit2.text())  # отрезок
+    print('f(a)*f(b): ', np.round(f(a) * f(b), 4))  # < 0
+    print('f\'(a): ', np.round(df(a), 4))  # <> 0
+    print('f\'\'(a): ', np.round(d2f(a), 4))  # <> 0
+    print('f(3)*f\'\'(x): ', np.round(f(a) * d2f(np.linspace(a, b, 10)), 4))  # > 0 => x0 = a
 
     m = min(df(np.linspace(a, b, 10)))  # min|f'(x)|
     xn = a
@@ -38,8 +40,7 @@ def analitic_resolve():
     window.grid1_label1.setText("Корень: " + str(xn1))
     window.grid1_label2.setText("Проверка: " + str(f(xn1)))
 
-window.grid2_button2.clicked.connect(analitic_resolve)
+
+window.grid2_button2.clicked.connect(tangent_analitic_resolve())
 window.show()
 app.exec()
-
-
