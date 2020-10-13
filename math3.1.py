@@ -39,9 +39,10 @@ while (not (np.abs(f(xn1)) <= E * m and np.abs(xn1 - xn) <= E)):
     n += 1
 
 window = eg.MainWindow()
+print(window.line_edit1.text())
 window.add_grid("Корень: " + str(xn1), 0, 0)
 window.add_grid("Проверка: " + str(f(xn1)), 0, 1)
-window.add_grafic(a, b, 100, f, lambda x: x * 0)
+window.add_graphic(a, b, 100, f, lambda x: x * 0)
 window.show()
 app.exec()
 
