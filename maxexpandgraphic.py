@@ -40,15 +40,20 @@ class MainWindow(QtWidgets.QMainWindow):
         self.grid2.addWidget(QtWidgets.QLabel("Начало отрезка(a)"), 0, 2)
         self.grid2.addWidget(QtWidgets.QLabel("Конец отрезка(b)"), 0, 3)
         self.grid2.addWidget(QtWidgets.QLabel("Количество точек на отрезке"), 0, 4)
-        self.grid2.addWidget(QtWidgets.QLabel("Уравнение"), 0, 5)
-        self.grid2_lineEdit1 = QtWidgets.QLineEdit("-5")
+        self.grid2.addWidget(QtWidgets.QLabel("Точность"), 0, 5)
+        self.grid2.addWidget(QtWidgets.QLabel("Уравнение"), 0, 6)
+        self.grid2_lineEdit1 = QtWidgets.QLineEdit("1")
         self.grid2_lineEdit2 = QtWidgets.QLineEdit("5")
         self.grid2_lineEdit3 = QtWidgets.QLineEdit("100")
+        self.grid2_lineEdit4 = QtWidgets.QLineEdit("0.001")
+        self.grid2_lineEdit4.textChanged.connect(self.set_accurate)
+        #===================================================================
         self.grid2_comboBox = QtWidgets.QComboBox()
         self.grid2_comboBox.addItem('log(x, 10) - 7 / (2 * x + 6)')
         self.grid2_comboBox.addItem('x ** 3 - 3 * x ** 2 + 6 * x - 3')
         self.grid2_comboBox.setEditable(True)
         self.grid2_comboBox.currentIndexChanged.connect(self.change_equation)
+        #====================================================================
         grid2_button1 = QtWidgets.QPushButton("Построить график")
         grid2_button1.clicked.connect(self.create_graphic)
         self.grid2.addWidget(grid2_button1, 1, 0)
@@ -58,9 +63,11 @@ class MainWindow(QtWidgets.QMainWindow):
         self.grid2.addWidget(self.grid2_lineEdit1, 1, 2)
         self.grid2.addWidget(self.grid2_lineEdit2, 1, 3)
         self.grid2.addWidget(self.grid2_lineEdit3, 1, 4)
-        self.grid2.addWidget(self.grid2_comboBox, 1, 5)
+        self.grid2.addWidget(self.grid2_lineEdit4, 1, 5)
+        self.grid2.addWidget(self.grid2_comboBox, 1, 6)
 
         # function============================================
+        self.E = float(self.grid2_lineEdit4.text())
         x = sp.Symbol('x')
         self.y = self.grid2_comboBox.currentText() # функция
         self.dy = sp.diff(self.y)  # первая производная
@@ -109,6 +116,11 @@ class MainWindow(QtWidgets.QMainWindow):
     def get_funcs(self, *args):
         self.funcs = args
 
+    def set_accurate(self):
+        try: self.E = float(self.grid2_lineEdit4.text())
+        except: pass
+        print(self.E)
+
     def change_equation(self):
         x = sp.Symbol('x')
         self.y = self.grid2_comboBox.currentText()  # функция
@@ -140,9 +152,9 @@ class MainWindow(QtWidgets.QMainWindow):
         xn = a
         xn1 = xn - self.f(xn) / self.df(xn)
         n = 0
-        E = 0.001
 
-        while (not (np.abs(self.f(xn1)) <= E * m and np.abs(xn1 - xn) <= E)):
+
+        while (not (np.abs(self.f(xn1)) <= self.E * m and np.abs(xn1 - xn) <= self.E)):
             xn = xn1
             xn1 = xn - self.f(xn) / self.df(xn)
             n += 1
@@ -158,13 +170,13 @@ class MainWindow(QtWidgets.QMainWindow):
         print('f(a)*f\'\'(x): ', self.f(a) * self.d2f(np.linspace(a, b, 10)))  # > 0 => d = a, x0 = b
         m = min(self.df(np.linspace(a, b, 10)))  # min|f'(x)|
         d = a
-        E = 0.001
         n = 0
         xn = b
         xn1 = xn - self.f(xn) * (xn - d) / (self.f(xn) - self.f(d))
-        while (not (np.abs(self.f(xn1)) <= E * m and np.abs(xn1 - xn) <= E)):
+        while (not (np.abs(self.f(xn1)) <= self.E * m and np.abs(xn1 - xn) <= self.E)):
             xn = xn1
             xn1 = xn - self.f(xn) * (xn - d) / (self.f(xn) - self.f(d))
             n += 1
         self.grid1_label1.setText("Корень: " + str(xn1))
         self.grid1_label2.setText("Проверка: " + str(self.f(xn1)))
+

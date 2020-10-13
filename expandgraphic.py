@@ -29,7 +29,7 @@ class MainWindow(QtWidgets.QMainWindow):
         self.grid2.addWidget(QtWidgets.QLabel("Начало отрезка(a)"), 0 , 2)
         self.grid2.addWidget(QtWidgets.QLabel("Конец отрезка(b)"), 0, 3)
         self.grid2.addWidget(QtWidgets.QLabel("Количество точек на отрезке"), 0, 4)
-        self.grid2_lineEdit1 = QtWidgets.QLineEdit("-5")
+        self.grid2_lineEdit1 = QtWidgets.QLineEdit("1")
         self.grid2_lineEdit2 = QtWidgets.QLineEdit("5")
         self.grid2_lineEdit3 = QtWidgets.QLineEdit("100")
         grid2_button1 = QtWidgets.QPushButton("Построить график")

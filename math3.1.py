@@ -41,6 +41,6 @@ def tangent_analitic_resolve():
     window.grid1_label2.setText("Проверка: " + str(f(xn1)))
 
 
-window.grid2_button2.clicked.connect(tangent_analitic_resolve())
+window.grid2_button2.clicked.connect(tangent_analitic_resolve)
 window.show()
 app.exec()
