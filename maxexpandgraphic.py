@@ -105,8 +105,6 @@ class MainWindow(QtWidgets.QMainWindow):
         x = np.linspace(start, end, count)
         for i in self.funcs:
             sc.axes.plot(x, i(x))
-        self.hide()
-        self.show()
 
     def create_graphic(self):
         self.add_graphic(float(self.grid2_lineEdit1.text()),
