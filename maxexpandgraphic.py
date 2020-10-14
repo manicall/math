@@ -117,7 +117,6 @@ class MainWindow(QtWidgets.QMainWindow):
     def set_accurate(self):
         try: self.E = float(self.grid2_lineEdit4.text())
         except: pass
-        print(self.E)
 
     def change_equation(self):
         x = sp.Symbol('x')
@@ -128,7 +127,6 @@ class MainWindow(QtWidgets.QMainWindow):
         self.df = sp.lambdify(x, self.dy)
         self.d2f = sp.lambdify(x, self.d2y)
         self.get_funcs(self.f, lambda x: x * 0)
-        print(self.y)
 
     def set_tangent_resolve_method(self):
         self.label.setText("выбран метод касательных")
