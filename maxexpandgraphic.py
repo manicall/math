@@ -69,7 +69,7 @@ class MainWindow(QtWidgets.QMainWindow):
         # function============================================
         self.E = float(self.grid2_lineEdit4.text())
         x = sp.Symbol('x')
-        self.y = self.grid2_comboBox.currentText() # функция
+        self.y = self.grid2_comboBox.currentText()  # функция
         self.dy = sp.diff(self.y)  # первая производная
         self.d2y = sp.diff(self.dy)  # вторая производная
         self.f = sp.lambdify(x, self.y)
@@ -98,10 +98,8 @@ class MainWindow(QtWidgets.QMainWindow):
 
     def add_graphic(self, start, end, count):
         sc = MplCanvas()
-        self.layout.removeWidget(self.old_sc)
-        self.old_sc = sc
+        self.layout.takeAt(2).widget().deleteLater()
         self.layout.insertWidget(2, sc)
-
         x = np.linspace(start, end, count)
         for i in self.funcs:
             sc.axes.plot(x, i(x))

@@ -1,7 +1,7 @@
 '''Метод касательных'''
 from PyQt5 import QtWidgets
 import sys
-import expandgraphic as eg
+from v1 import expandgraphic as eg
 import numpy as np
 import sympy as sp
 
