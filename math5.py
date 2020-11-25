@@ -64,13 +64,15 @@ if all(lJ[0][1](np.linspace(-1, 0, 10)) * lJ[1][0](np.linspace(-3, -2, 10)) != -
         b = np.array([b1(xk, yk), b2(xk, yk)])
         return np.linalg.solve(A, b)
     xk1, yk1 = solve()
+    i = 0
     while not (max(np.abs(xk1 - xk), np.abs(yk1 - yk)) <= eps):
         xk = xk1
         yk = yk1
         xk1, yk1 = solve()
+        i += 1
     print('корни:', xk1, yk1)
     print('проверка:', np.sin(xk1 + 0.5) - yk1 - 2, np.cos(yk1 + 2) + xk1)
-
+    print('количество шагов:', i)
 
 #  МЕТОД ИТЕРАЦИЙ
 print('Медот итераций')
@@ -85,7 +87,7 @@ lM = np.array([
     [sp.lambdify('x', sp.diff(f2, 'x')), sp.diff(f2, 'y')]
 ])
 
-print(M)
+#print(M)
 normaM1 = (max(lM[0][1](np.linspace(-1, -0.85, 10))))
 normaM2 = (max(lM[1][0](np.linspace(-3, -2, 10))))
 M = np.array([
@@ -98,11 +100,14 @@ x = np.array([-1, -3])
 xk1 = -np.cos(x[1] + 2)
 yk1 = np.sin(x[0] + 0.5) - 2
 
+i = 0
 while not ((np.linalg.norm((np.array([xk1, yk1]) - x), ord=float('inf'))
             <= (((1 - normaM) / normaM) * eps))):
     x = [xk1, yk1]
     xk1 = -np.cos(x[1] + 2)
     yk1 = np.sin(x[0] + 0.5) - 2
+    i += 1
 print('корни:', xk1, yk1)
 print('проверка:', np.sin(xk1 + 0.5) - yk1 - 2, np.cos(yk1 + 2) + xk1)
+print('количество шагов:',i)
 plt.show()
