@@ -1,5 +1,6 @@
 import numpy as np
 import matplotlib.pyplot as plt
+from decimal import Decimal
 
 x = 0.896
 ix = [0.68, 0.73, 0.80, 0.88, 0.93, 0.99]
@@ -21,11 +22,15 @@ print("iy[i]/Di[i]:", [np.round(iy[i]/Di[i], 5) for i in range(n)])
 F = np.prod([x - ix[i] for i in range(n)]) * sum(list_of_division)
 print("F:", F)
 print()
-fig = plt.figure()
-plt.subplot(111)
-plt.plot(ix, iy)
-plt.scatter(x, F, s=15, color='red')
+fig, ax = plt.subplots()
+ax.scatter(F, x, s=10, color='red')
+ax.plot(iy, ix)
+ax.grid()
+#  Добавляем подписи к осям:
+ax.set_xlabel('y')
+ax.set_ylabel('x')
 plt.show()
+
 #================================================================
 
 x = 0.2121
@@ -60,9 +65,12 @@ for row in _list:
         print(col.ljust(20," "), end=" ")
 print()
 print("F:", F)
-fig = plt.figure()
-plt.subplot(111)
-plt.plot(ix, iy)
-plt.scatter(x, F, s=15, color='red')
+fig, ax = plt.subplots()
+ax.scatter(F, x, s=10, color='red')
+ax.plot(iy, ix)
+ax.grid()
+#  Добавляем подписи к осям:
+ax.set_xlabel('y')
+ax.set_ylabel('x')
 plt.show()
 
