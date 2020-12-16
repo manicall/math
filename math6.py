@@ -1,6 +1,5 @@
 import numpy as np
 import matplotlib.pyplot as plt
-from decimal import Decimal
 
 x = 0.896
 ix = [0.68, 0.73, 0.80, 0.88, 0.93, 0.99]

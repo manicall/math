@@ -17,7 +17,7 @@ if la.det(A) != 0:
         x0 = np.array([1, 1, 1])
         x1 = np.dot(C, x0) + D
         k = 0
-        while not ((la.norm((x1 - x0), ord=float('inf')) <= (((1 - normaC) / normaC) * eps))):
+        while not (la.norm((x1 - x0), ord=float('inf')) <= (((1 - normaC) / normaC) * eps)):
             x0 = x1
             x1 = np.dot(C, x0) + D
             k += 1

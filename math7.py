@@ -6,9 +6,6 @@ print('интеграл по формуле трапеций')
 a = 0.8
 b = 1.4
 y = '1 / sqrt(2 * x ** 2 + 3)'
-#пример
-a = 0.7; b = 1.3
-y = '1 / sqrt(2 * x ** 2 + 0.3)'
 f = smp.lambdify('x', y)
 d2y = smp.diff(y, 'x', 'x')
 #d2y = smp.simplify(d2y)

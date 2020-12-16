@@ -101,8 +101,8 @@ xk1 = -np.cos(x[1] + 2)
 yk1 = np.sin(x[0] + 0.5) - 2
 
 i = 0
-while not ((np.linalg.norm((np.array([xk1, yk1]) - x), ord=float('inf'))
-            <= (((1 - normaM) / normaM) * eps))):
+while not (np.linalg.norm((np.array([xk1, yk1]) - x), ord=float('inf'))
+            <= (((1 - normaM) / normaM) * eps)):
     x = [xk1, yk1]
     xk1 = -np.cos(x[1] + 2)
     yk1 = np.sin(x[0] + 0.5) - 2

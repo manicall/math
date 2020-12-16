@@ -1,0 +1,13 @@
+
+Upython:S5754Œ"<Specify an exception class to catch or reraise the exception(ˆÊÉ·
+Cpython:S1481Ò"%Remove the unused local variable "n".(‘£ë…ÿÿÿÿÿ
+opython:S117"XRename this local variable "menuBar" to match the regular expression ^[_a-z][a-z0-9_]*$.(÷ƒÑ×
+Upython:S5754Ã"<Specify an exception class to catch or reraise the exception(òö‘¤
+jpython:S1192z"MDefine a constant instead of duplicating this literal "ÐžÑˆÐ¸Ð±ÐºÐ°" 5 times.( —Ðþùÿÿÿÿ
+Upython:S5754«"<Specify an exception class to catch or reraise the exception(òö‘¤
+¢python:S1192¢"ˆDefine a constant instead of duplicating this literal "ÐÐµÐ²Ð¾Ð·Ð¼Ð¾Ð¶Ð½Ð¾ Ð²Ñ‹Ñ‡Ð¸ÑÐ»Ð¸Ñ‚ÑŒ ÐºÐ¾Ñ€ÐµÐ½ÑŒ ÑƒÑ€Ð°Ð²Ð½ÐµÐ½Ð¸Ñ" 3 times.(ì–­‰
+Cpython:S1481¹"%Remove the unused local variable "n".(‘£ë…ÿÿÿÿÿ
+>python:S1481×"%Remove the unused local variable "n".(•ö€Ž
+Tpython:S5754y"<Specify an exception class to catch or reraise the exception(ˆÊÉ·
+Upython:S5754"<Specify an exception class to catch or reraise the exception(–’Ê
+>python:S1481½"%Remove the unused local variable "n".(•ö€Ž
